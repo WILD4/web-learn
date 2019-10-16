@@ -1,0 +1,40 @@
+<html lang="zh-cn">
+    <head>
+        <link rel="stylesheet" type="text/css" href="common.css">
+        <title></title>
+
+        <script>
+            function displayTime(){
+                var elt = document.getElementById("clock");
+                var now = new Date();
+                elt.innerHTML = "<p>" + now.getHours() + ":" + (now.getMinutes() < 10 ? "0"+now.getMinutes() : now.getMinutes()) +":"+ (now.getSeconds()<10 ? "0"+now.getSeconds() : now.getSeconds()) +"</p>";
+                setTimeout(displayTime, 1000);
+            }
+            window.onload = displayTime;
+
+        </script>
+
+        <style>
+            #clock p{
+                background-color:ddddff;
+                text-align: center;
+                font-size: 2em;
+                width: 150px;
+                border-radius: 8px;
+                border: 2px solid #000000;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <span>一个简单的数字时钟</span>
+        <div class="line"></div>
+        <div id="clock">
+
+        </div>
+
+
+    </body>
+
+</html>
